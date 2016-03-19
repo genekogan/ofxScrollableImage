@@ -10,10 +10,15 @@ public:
     
     void setup(string path, int width, int height);
     void loadImage(string path);
+
     void setSize(int width, int height);
-    string getImagePath() {return path;}
     void setScale(float scale);
     void setPosition(float tx, float ty);
+    
+    string getImagePath() {return path;}
+    int getWidth() {return width;}
+    int getHeight() {return height;}
+
     void draw(int x, int y);
     
 private:
