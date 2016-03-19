@@ -16,6 +16,8 @@ public:
     void setPosition(float tx, float ty);
     
     string getImagePath() {return path;}
+    int getImageWidth() {return img.getWidth();}
+    int getImageHeight() {return img.getHeight();}
     int getWidth() {return width;}
     int getHeight() {return height;}
 

@@ -55,8 +55,8 @@ void ofxScrollableImage::setPosition(float tx, float ty) {
 }
 
 void ofxScrollableImage::update() {
-    float px = ofMap(tx, 0, 1, 0, (img.getWidth()/scale - width), true);
-    float py = ofMap(ty, 0, 1, 0, (img.getHeight()/scale - height), true);
+    float px = ofMap(tx, 0, 1, 0, max(0.0f, (img.getWidth()/scale - width)), true);
+    float py = ofMap(ty, 0, 1, 0, max(0.0f, (img.getHeight()/scale - height)), true);
     fbo.begin();
     ofClear(0, 0, 0, 255);
     shader.begin();
